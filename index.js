@@ -4,7 +4,7 @@ const start = async function() {
     const scriptUrl = "https://raw.githubusercontent.com/gt-hb/helloworld/master/test.csv";
     let req = new Request(scriptUrl);
     req.allowInsecureRequest = true;
-    fetch(request)
+    fetch(req)
   .then(response => {
     if (response.status === 200) {
       return response.json();
