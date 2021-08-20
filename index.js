@@ -16,6 +16,7 @@ const start = async function() {
   .catch(error => {
     console.error(error);
   });
+}
     
 
 start();
