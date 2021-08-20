@@ -7,19 +7,15 @@ const start = async function() {
     fetch(req)
   .then(response => {
     if (response.status === 200) {
-      return response.json();
+      let body = response.body();
+      document.getElementById("demo").innerHTML = body;
     } else {
       throw new Error('Something went wrong on api server!');
     }
   })
-  .then(response => {
-    console.debug(response);
-    // ...
-  }).catch(error => {
+  .catch(error => {
     console.error(error);
   });
-    let response = await req.loadString();
-    document.getElementById("demo").innerHTML = response;
-}
+    
 
 start();
