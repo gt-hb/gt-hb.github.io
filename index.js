@@ -1,4 +1,4 @@
-document.getElementById("demo").innerHTML = "Hello JavaScript!";
+//document.getElementById("demo").innerHTML = "Hello JavaScript!";
 
 const start = async function() {
     const scriptUrl = "https://raw.githubusercontent.com/gt-hb/helloworld/test.csv";
