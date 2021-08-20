@@ -7,7 +7,7 @@ const start = async function() {
     fetch(req)
   .then(response => {
     if (response.status === 200) {
-      let body = response.json();
+      let body = response.body.text();
       document.getElementById("demo").innerHTML = body;
     } else {
       throw new Error('Something went wrong on api server!');
