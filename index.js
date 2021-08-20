@@ -7,11 +7,13 @@ const start = async function() {
     fetch(req)
   .then(response => {
     if (response.status === 200) {
-      let body = response.body.text();
-      document.getElementById("demo").innerHTML = body;
+      return response.text();
     } else {
       throw new Error('Something went wrong on api server!');
     }
+  })
+  .then(body => {
+      document.getElementById("demo").innerHTML = body;    
   })
   .catch(error => {
     console.error(error);
