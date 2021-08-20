@@ -7,5 +7,9 @@
 <p id="demo">My first paragraph.</p>
 
 </body>
-<script type="application/javascript" src="https://raw.githubusercontent.com/gt-hb/helloworld/master/js.js"></script> 
+<script>
+  var jsFile = document.createElement("script");
+  jsFile.src = "https://raw.githubusercontent.com/gt-hb/helloworld/master/js.js";  // it can be path also  "{themes('/scripts/homePage.js')}"
+  document.body.appendChild(jsFile); 
+</script> 
 </html>
